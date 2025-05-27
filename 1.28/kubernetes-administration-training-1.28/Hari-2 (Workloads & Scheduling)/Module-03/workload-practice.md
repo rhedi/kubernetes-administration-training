@@ -189,7 +189,7 @@ add this
 apiVersion: v1
 kind: Pod
 metadata:
-  labels:
+  label:
     env: dev
     apps-type: frontend-dev
   name: pod-nginx
@@ -541,7 +541,7 @@ vim deployment-hpa.yml
 
 add this
 ```
-apiVersion: apps/v1
+apiVersion: autoscaling/v2
 kind: Deployment
 metadata:
   name: deployment-hpa

@@ -243,7 +243,7 @@ ipvs:
 
 To install MetalLB, apply the manifest:
 ```
-kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.10/config/manifests/metallb-native.yaml
 ```
 
 ## set range ip for metallb loadbalancer
@@ -272,7 +272,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 172.23.x.x-172.23.x.x
+  - 10.23.0.x-10.23.0.x
 ```
 
 Create l2 advertisement
@@ -301,7 +301,7 @@ kubectl apply -f Metallb/
 
 Installation manifest for cloud / baremetal with metallb
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml
 ```
 ### single path
 create ingress 

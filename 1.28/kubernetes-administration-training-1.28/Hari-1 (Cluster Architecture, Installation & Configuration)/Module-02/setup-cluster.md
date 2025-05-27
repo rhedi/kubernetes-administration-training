@@ -46,8 +46,8 @@ kubectl get node
 ### Install CNI Plugin
 install operator calico
 ```
-kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/tigera-operator.yaml
-curl https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/custom-resources.yaml -O
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/tigera-operator.yaml
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/custom-resources.yaml -O
 kubectl create -f custom-resources.yaml
 ```
 
@@ -66,11 +66,11 @@ spec:
       containers:
       - args:
         - --cert-dir=/tmp
-        - --secure-port=10250
+        - --secure-port=4443
         - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
         - --kubelet-use-node-status-port
         - --metric-resolution=15s
-#add    - --kubelet-insecure-tls
+#Add    - --kubelet-insecure-tls
 ```
 
 Check pod status
